@@ -1,2 +1,7 @@
 node_modules
-.idea/
+.idea/auth-graphql-starter.iml
+.idea/deployment.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
