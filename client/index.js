@@ -7,6 +7,10 @@ import {Router, hashHistory, Route, IndexRoute} from 'react-router';
 
 import App from './commponents/App';
 import LoginForm from './commponents/LoginForm';
+import SignupForm from "./commponents/SignupForm";
+import Dashboard from "./commponents/Dashboard";
+import requireAuth from "./commponents/requireAuth";
+
 
 const networkInterface = createNetworkInterface({
     uri: '/graphql',
@@ -26,6 +30,8 @@ const Root = () => {
             <Router history={hashHistory}>
                 <Route path="/" component={App}>
                     <Route path='login' component={LoginForm}/>
+                    <Route path='signup' component={SignupForm}/>
+                    <Route path='dashboard' component={requireAuth(Dashboard)}/>
                 </Route>
             </Router>
         </ApolloProvider>
